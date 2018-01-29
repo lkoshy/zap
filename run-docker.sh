@@ -13,6 +13,10 @@ docker exec $CONTAINER_ID zap-cli -p 2375 active-scan -r $TARGET_URL
 
 docker exec $CONTAINER_ID zap-cli -p 2375 alerts
 
+docker exec $CONTAINER_ID zap-cli -p 2375 report -o zap-report.html -f html
+
+docker exec $CONTAINER_ID zap-cli -p 2375 zap-report.html > zap-report.html
+
 # docker logs [container ID or name]
 divider==================================================================
 printf "\n"
