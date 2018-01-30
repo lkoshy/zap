@@ -17,6 +17,7 @@ docker exec $CONTAINER_ID zap-cli -p 2375 report -o zap-report.html -f html
 docker exec $CONTAINER_ID pwd
 docker exec $CONTAINER_ID ls -la
 
+pwd
 docker cp $CONTAINER_ID:/zap/zap-report.html .
 
 # docker logs [container ID or name]
